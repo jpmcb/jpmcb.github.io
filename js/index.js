@@ -7,12 +7,10 @@ function runGraph() {
   
   var data = {
     nodes : [
-      {id: 'a', text: 'Portfolio', state: 'off'},
-      {id: 'b', text: 'About', state: 'off', funk: function() {
-       
-      }},
-      {id: 'c', text: 'JavaScript', state: 'off'},
-      {id: 'd', text: 'Contact', state: 'off'},
+      {id: 'a', text: 'Portfolio', state: 'off', link: '#portfolio', linkTarget: ''},
+      {id: 'b', text: 'About', state: 'off', link: '#about', linkTarget: ''},
+      {id: 'c', text: 'JavaScript', state: 'off', link: 'https://github.com/jpmcb/JavaScript-Calculator', linkTarget: '_blank'},
+      {id: 'd', text: 'Contact', state: 'off', link: '#contact', linkTarget: ''},
       {id: 'e', text: 'D3.js', state: 'off'},
       {id: 'f', text: 'React', state: 'off'},
       {id: 'g', text: 'JavaScript', state: 'off'},
@@ -121,7 +119,8 @@ function runGraph() {
     .attr('ry', 20);
   
   var anchors = nodes.append('a')
-    .attr("href", "#about");
+    .attr("href", function(d){ return d.link; })
+    .attr('target', function(d){ return d.linkTarget; });
   
   var skillText = anchors.append('text')
       .attr('dx', 0)
