@@ -143,6 +143,17 @@ svg .header2 {
   text-align: center;
 }
 
+#portfolio h3{
+  margin-top: 30px;
+  color: white;
+  font-size: 1em;
+}
+
+#portfolio img{
+  border: solid white;
+  border-radius: 5px 5px 5px;
+}
+
 #contact {
   background: black;
   text-align: center;
