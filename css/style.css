@@ -15,6 +15,16 @@ body {
   background: #d8d8d8;
   border-radius: 25px 25px 25px;
 }
+
+.centered {
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 80px;
+}
+
 #social a {
   text-decoration: none;
   color: #595959;
